@@ -25,7 +25,7 @@ export const fetchContent = async (req, res, next) => {
 
             ) {
 
-                result = await contentService.insertContent({ date, orgId, branchCode, serialNumber, pageName, url, documentName, type, category, json_data, status })
+                result = await contentService.insertContent({ date, orgId, branchCode, serialNumber, pageName, url, documentName, type, category, json_data: JSON.stringify(json_data), status })
                 console.log({ result })
                 if (result) {
                     result = await contentService.getContent({ content_id: result.insertId });

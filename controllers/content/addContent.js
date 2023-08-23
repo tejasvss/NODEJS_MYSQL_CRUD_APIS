@@ -14,7 +14,7 @@ export const addContent = async (req, res, next) => {
         let { date, orgId, branchCode, serialNumber, pageName, url, documentName, type, category, json_data, status } = req.body;
 
         const data = {
-            date, orgId, branchCode, serialNumber, pageName, url, documentName, type, category, json_data, status
+            date, orgId, branchCode, serialNumber, pageName, url, documentName, type, category, json_data: JSON.stringify(json_data), status
         };
         let result = await contentService.insertContent(data);
         if (result) {

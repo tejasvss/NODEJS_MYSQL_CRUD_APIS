@@ -16,7 +16,7 @@ CREATE TABLE `tbl_content` (
   `documentName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `type` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `category` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `json_data` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `json_data` JSON,
   `date` date DEFAULT NULL,
   `status` int DEFAULT '1',
   `is_Deleted` tinyint(1) DEFAULT '0',
